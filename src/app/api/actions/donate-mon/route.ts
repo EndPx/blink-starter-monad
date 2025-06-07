@@ -22,18 +22,9 @@ const headers = {
 
 // OPTIONS endpoint is required for CORS preflight requests
 // Your Blink won't render if you don't add this
-export const OPTIONS = async (req: Request) => {
-  return new Response(null, {
-    status: 204,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-      "Access-Control-Allow-Headers":
-        "Content-Type, x-blockchain-ids, x-action-version",
-    },
-  });
+export const OPTIONS = async () => {
+  return new Response(null, { status:204, headers });
 };
-
 
 // GET endpoint returns the Blink metadata (JSON) and UI configuration
 export const GET = async (req: Request) => {
