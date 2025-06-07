@@ -12,9 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <body
-        >
-            // Wrap provider around children
+        <body>
             <Providers>{children}</Providers>
         </body>
     </html>
